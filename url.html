@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    // Assume 'image.jpg' is the name of your downloaded image file
+const imageName = 'covers/balma.png';
+
+// Fetch the image file from the local directory
+fetch(imageName)
+  .then(response => response.blob())
+  .then(blob => {
+    // Convert the image blob into a data URL
+    const reader = new FileReader();
+    reader.onload = () => {
+      const dataURL = reader.result;
+      // Now you can use the data URL in your JavaScript code
+      console.log(dataURL);
+    };
+    reader.readAsDataURL(blob);
+  })
+  .catch(error => {
+    console.error('Error fetching image:', error);
+  });
+
+  </script>
+</body>
+</html>

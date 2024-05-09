@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap');
+
+body {
+  background-color: black;
+  color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.left {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 30vw;
+  padding: 10px;
+}
+
+.right {
+  position: relative;
+  overflow-y: scroll;
+  width: 70vw;
+  margin-top: 10px;
+  margin-bottom: 0;
+
+}
+
+.home ul {
+  margin: 0;
+}
+
+.home ul li {
+  display: flex;
+  width: 14px;
+  gap: 15px;
+  list-style: none;
+  padding-top: 14px;
+  font-weight: bold;
+}
+
+.search {
+  width: 14px;
+  cursor: pointer;
+}
+
+.heading {
+  font-size: 13px;
+  display: flex;
+  width: 14px;
+  gap: 15px;
+  padding-top: 14px;
+  padding: 23px 14px;
+  /* Order of padding is TRBL*/
+  font-weight: bold;
+  align-items: center;
+  /* this is for vertically centering them */
+}
+
+
+.heading img {
+  width: 30px;
+}
+
+.library {
+  overflow-x: hidden;
+  max-height: 100vh;
+  position: relative;
+}
+.footer {
+
+  bottom: 0;
+  display: flex;
+  font-size: 10px;
+  color: grey;
+  gap: 3px;
+  text-decoration: none;
+  padding: 12px 0;
+  margin-left: 12px;
+margin-top: 900px;
+}
+
+.footer a {
+  font-size: 10px;
+  color: grey;
+}
+
+.header {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: rgb(34, 34, 34);
+}
+
+.header>* {
+  padding: 20px;
+
+}
+
+
+/* This css for one plyalist song */
+
+
+.spotifyPlaylist h1 {
+  margin: 20px;
+}
+
+.cardContainer {
+  margin: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  max-height: 70vh;
+
+}
+
+.card {
+  position: relative;
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #252525;
+  transition-duration: 0.5s;
+
+}
+
+.card:hover {
+  background-color: rgb(61, 61, 61);
+}
+
+.card>* {
+  padding-top: 6px;
+}
+
+.card img {
+  width: 100%;
+  object-fit: contain;
+  /* The image gets fits in the container*/
+}
+
+.play {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background-color: #1fdf64;
+  border-radius: 50%;
+  display: flex;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  opacity: 1;
+  top: 167px;
+  left: 159px;
+  transition: all 1s ease-out;
+}
+
+.play {
+  transition: transform 0.7s ease;
+
+}
+
+.playing {
+  transform: rotate(180deg);
+}
+
+.signUpBtn {
+  width: 120px;
+  height: 50px;
+  font-size: 1rem;
+  padding: 8px;
+  color: #878484;
+  background-color: transparent;
+  border: none;
+  border-radius: 10px;
+  font-family: 'Roboto';
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+
+}
+
+.buttons>* {
+  margin-right: 0 12px;
+}
+
+.signUpBtn:hover {
+  font-size: 1.1rem;
+
+  color: rgb(219, 219, 219);
+
+}
+
+.loginBtn {
+  width: 110px;
+  height: 45px;
+  font-size: 1rem;
+  padding: 12px;
+  color: black;
+  background-color: white;
+  border: none;
+  border-radius: 40px;
+  font-family: 'Roboto';
+  text-align: center;
+  cursor: pointer;
+}
+
+.loginBtn:hover {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.playBar {
+ filter: invert(1);
+  position: fixed;  /*  to stick the whole playbar to the position */
+  background-color: rgb(201, 197, 197);
+width: 67vw;
+  bottom: 20px;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+
+/* CSS for Play, Pause and Next song Buttons */
+.songButtons {
+margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 50px;
+}
+
+.songButtons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #f8f3f3;
+  border: none;
+  border-radius: 5px;
+  color: rgb(254, 247, 247);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+/* All the css for Song list on the left bar */
+.songList {
+
+margin: 24px 0 ;
+  height: 600px;
+
+}
+.songList ul {
+  padding:  0 10px;
+  transition: transform 0.3s ease;
+  overflow: auto;
+  
+}
+.songList li:hover {
+  transition: transform 0.8s ease;
+  transform: translateX(10px);
+}
+.songList ul li {
+  margin: 3px;
+   display: flex;
+   justify-content: space-between;
+  transition: transform 0.3s ease;
+  gap: 30px;
+  display: flex;
+  list-style-type: decimal;
+  cursor: pointer;
+  padding: 10px 0 ;
+  border: 1px solid rgb(150, 147, 147);
+  padding-left: 12px;
+  border-radius: 6px;
+
+}
+.playNow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin: 10px;
+
+}
+.playNow span{
+  width: 80px;
+ font-size: 15px;
+  
+}
+
+.songList ul li .coverImage{
+  height: 42px;
+  width: 42px;
+
+}
+.songList ul li span{
+  text-decoration: underline;
+  font-weight: bold;
+  color: #007bff;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer;
+}
+.songList ul li span:hover{
+  color: #0455aa;
+}
+
+
+/* All css for seekBAr */
+.seekbar{
+  position: absolute;
+ bottom: -2px;
+  margin-bottom: 10px;
+  height: 10px;
+  width: 95%;
+  border: 2px solid rgb(188, 177, 177);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.progressBar{
+  transition: width 0.3s ease;
+  height: 100%;
+  background-color: rgb(242, 83, 15);
+  border-radius: 5px;
+  width: 0%; /* This will be adjusted dynamically with JavaScript */
+}
+
+
+
+
+
+
+/* All THE CSS FOR SEARCH BAR  */
+.search-container {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out; /* Apply transition effect on opacity */
+}
+.search-container {
+  position: relative;
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  align-items: center;
+  max-width: 400px; /* Adjust as needed */
+  margin: 0 auto; /* Center the search bar */
+  margin-left: 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+#searchInput {
+  padding: 10px 36px 10px 17px;
+  border: 1px solid white;
+  border-radius: 30px;
+  font-size: 18px;
+  margin-right: 5px;
+
+  background-image: url('search.svg'); /* Path to your search icon */
+    background-size: 25px; /* Adjust icon size */
+    background-repeat: no-repeat;
+    background-position: 95% center; /* Position the icon to the right */
+}
+#searchInput:focus {
+  outline: none; /* Remove the default focus outline */
+  border-color: #4CAF50; /* Apply custom focus border color */
+}
+
+#playButton {
+  transition: transform 0.3s ease;
+}
+
+#playButton:hover {
+  transform: scale(1.3);
+  background-color:aquamarine;
+}
+
+#previousButton:active,
+#nextButton:active {
+  background-color: #45a049; /* Darker green */
+}
+#previousButton:hover,#nextButton:hover{
+  transform: scale(1.1);
+  background-color:aquamarine;
+}
+
+
+
+
+
